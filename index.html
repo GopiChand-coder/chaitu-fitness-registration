@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Chaitu Fitness client registration form">
+  <title>Chaitu Fitness | Client Registration</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-bg"></div>
+
+  <header class="site-header">
+    <div class="brand">
+      <div class="brand-mark">CF</div>
+      <div>
+        <div class="brand-name">CHAITU <span>FITNESS</span></div>
+        <div class="brand-tagline">Train. Transform. Thrive.</div>
+      </div>
+    </div>
+    
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="eyebrow">CLIENT REGISTRATION</div>
+      <h1>BUILD YOUR<br><span>STRONGER SELF.</span></h1>
+      <p>Tell us about yourself and your goals. Chaitu will use these details to understand your fitness needs and create the right training approach for you.</p>
+      <div class="trust-row">
+        <span>✓ Personalised guidance</span>
+        <span>✓ Simple registration</span>
+        <span>✓ Your details stay private</span>
+      </div>
+    </section>
+
+    <form id="registrationForm" novalidate>
+      <div class="progress-card">
+        <div class="progress-top">
+          <span id="sectionLabel">01 / 07</span>
+          <strong id="progressTitle">Personal Details</strong>
+        </div>
+        <div class="progress-track"><div id="progressBar"></div></div>
+      </div>
+
+      <!-- 1 -->
+      <section class="form-section active" data-section="1" data-title="Personal Details">
+        <div class="section-heading">
+          <span class="section-number">01</span>
+          <div><h2>Personal Details</h2><p>Basic information so we can identify and contact you.</p></div>
+        </div>
+        <div class="grid">
+          <label class="field full">Full Name *
+            <input name="fullName" type="text" placeholder="Enter your full name" autocomplete="name" required>
+            <small class="error"></small>
+          </label>
+          <label class="field">Age *
+            <input name="age" type="number" min="13" max="100" placeholder="e.g. 22" required>
+            <small class="error"></small>
+          </label>
+          <label class="field">Gender *
+            <select name="gender" required>
+              <option value="">Select gender</option>
+              <option>Male</option><option>Female</option><option>Other</option><option>Prefer not to say</option>
+            </select>
+            <small class="error"></small>
+          </label>
+          <label class="field">Phone Number *
+            <input name="phone" type="tel" inputmode="numeric" placeholder="10-digit mobile number" maxlength="10" required>
+            <small class="error"></small>
+          </label>
+          
+          <label class="field">City / Location
+            <input name="city" type="text" placeholder="e.g. Vijayawada">
+          </label>
+        </div>
+      </section>
+
+      <!-- 2 -->
+      <section class="form-section" data-section="2" data-title="Body Measurements">
+        <div class="section-heading">
+          <span class="section-number">02</span>
+          <div><h2>Body Measurements</h2><p>These help us understand your current starting point.</p></div>
+        </div>
+        <div class="grid">
+          <label class="field">Height (cm) *
+            <input name="height" type="number" min="100" max="250" step="0.1" placeholder="e.g. 175" required>
+            <small class="error"></small>
+          </label>
+          <label class="field">Current Weight (kg) *
+            <input name="weight" type="number" min="25" max="300" step="0.1" placeholder="e.g. 72" required>
+            <small class="error"></small>
+          </label>
+          <label class="field">Target Weight (kg)
+            <input name="targetWeight" type="number" min="25" max="300" step="0.1" placeholder="Optional">
+          </label>
+          
+        </div>
+      </section>
+
+      <!-- 3 -->
+      <section class="form-section" data-section="3" data-title="Fitness Background">
+        <div class="section-heading">
+          <span class="section-number">03</span>
+          <div><h2>Fitness Background</h2><p>Tell us where you are starting from.</p></div>
+        </div>
+        <div class="grid">
+          <label class="field full">Experience Level *
+            <div class="choice-grid">
+              <label class="choice"><input type="radio" name="experienceLevel" value="Beginner" required><span>Beginner<small>New to structured training</small></span></label>
+              <label class="choice"><input type="radio" name="experienceLevel" value="Intermediate"><span>Intermediate<small>Some consistent experience</small></span></label>
+              <label class="choice"><input type="radio" name="experienceLevel" value="Advanced"><span>Advanced<small>Strong training background</small></span></label>
+            </div>
+            <small class="error"></small>
+          </label>
+          <label class="field">Previous Gym Experience *
+            <select name="previousGym" required>
+              <option value="">Select</option><option>No</option><option>Yes</option>
+            </select>
+            <small class="error"></small>
+          </label>
+          <label class="field">Gym Experience
+            <input name="gymExperience" type="text" placeholder="e.g. 8 months / 2 years">
+          </label>
+          <label class="field full">Current Activity Level
+            <select name="activityLevel">
+              <option value="">Select activity level</option>
+              <option>Sedentary — mostly sitting</option>
+              <option>Lightly Active</option>
+              <option>Moderately Active</option>
+              <option>Highly Active</option>
+            </select>
+          </label>
+        </div>
+      </section>
+
+      <!-- 4 -->
+      <section class="form-section" data-section="4" data-title="Fitness Goals">
+        <div class="section-heading">
+          <span class="section-number">04</span>
+          <div><h2>Fitness Goals</h2><p>Select all goals that describe what you want to achieve.</p></div>
+        </div>
+        <div class="goal-grid">
+          <label class="goal"><input type="checkbox" name="goals" value="Weight Loss"><span>🔥<b>Weight Loss</b><small>Reduce overall body weight</small></span></label>
+          <label class="goal"><input type="checkbox" name="goals" value="Fat Loss"><span>⚡<b>Fat Loss</b><small>Improve body composition</small></span></label>
+          <label class="goal"><input type="checkbox" name="goals" value="Muscle Gain"><span>💪<b>Muscle Gain</b><small>Build lean muscle</small></span></label>
+          <label class="goal"><input type="checkbox" name="goals" value="Strength"><span>🏋️<b>Strength</b><small>Get stronger</small></span></label>
+          <label class="goal"><input type="checkbox" name="goals" value="Bodybuilding"><span>🏆<b>Bodybuilding</b><small>Build a muscular physique</small></span></label>
+          <label class="goal"><input type="checkbox" name="goals" value="General Fitness"><span>❤️<b>General Fitness</b><small>Become healthier and fitter</small></span></label>
+          <label class="goal"><input type="checkbox" name="goals" value="Stamina"><span>🏃<b>Stamina</b><small>Improve endurance</small></span></label>
+          <label class="goal"><input type="checkbox" name="goals" value="Flexibility"><span>🧘<b>Flexibility</b><small>Improve mobility</small></span></label>
+          <label class="goal"><input type="checkbox" name="goals" value="Maintain Physique"><span>✨<b>Maintain Physique</b><small>Stay fit and consistent</small></span></label>
+          <label class="goal"><input type="checkbox" name="goals" value="Other"><span>➕<b>Other</b><small>Tell us below</small></span></label>
+        </div>
+        <label class="field full inline-field">Other Goal
+          <input name="otherGoal" type="text" placeholder="Optional">
+        </label>
+        <small id="goalError" class="error standalone"></small>
+      </section>
+
+      <!-- 5 -->
+      <section class="form-section" data-section="5" data-title="Diet & Lifestyle">
+        <div class="section-heading">
+          <span class="section-number">05</span>
+          <div><h2>Diet & Lifestyle</h2><p>Simple lifestyle information helps us guide you better.</p></div>
+        </div>
+        <div class="grid">
+          <label class="field full">Diet Preference *
+            <select name="diet" required>
+              <option value="">Select your preference</option>
+              <option>Vegetarian</option><option>Non-Vegetarian</option><option>Eggetarian</option><option>Vegan</option><option>Both / Flexible</option>
+            </select>
+            <small class="error"></small>
+          </label>
+          <label class="field">Profession *
+            <select name="profession" required>
+              <option value="">Select profession</option>
+              <option>Student</option><option>Office Professional</option><option>Business</option><option>Self-employed</option><option>Other</option>
+            </select>
+            <small class="error"></small>
+          </label>
+          <label class="field">Average Sleep (hours)
+            <input name="sleep" type="number" min="0" max="24" step="0.5" placeholder="e.g. 7">
+          </label>
+          <label class="field">Daily Water Intake (litres)
+            <input name="water" type="number" min="0" max="20" step="0.5" placeholder="e.g. 2.5">
+          </label>
+          <label class="field full">Typical Daily Routine / Work Schedule
+            <textarea name="routine" rows="3" placeholder="e.g. College 9 AM–4 PM, gym in the evening..."></textarea>
+          </label>
+        </div>
+      </section>
+
+      
+
+      <!-- 7 -->
+      <section class="form-section" data-section="7" data-title="Package & Confirmation">
+        <div class="section-heading">
+          <span class="section-number">07</span>
+          <div><h2>Package & Confirmation</h2><p>Choose your plan and send your registration.</p></div>
+        </div>
+        <div class="package-grid">
+          <label class="package">
+            <input type="radio" name="package" value="1 Month - ₹2,000" required>
+            <div><span class="package-duration">1 MONTH</span><strong>₹2,000</strong><small>Great for getting started</small></div>
+          </label>
+          <label class="package featured">
+            <input type="radio" name="package" value="3 Months - ₹5,000">
+            <div><span class="package-duration">3 MONTHS</span><strong>₹5,000</strong><small>Best value • Save ₹1,000</small></div>
+          </label>
+        </div>
+        <small class="error package-error"></small>
+
+        <div class="grid top-gap">
+          
+          <label class="field full">Anything else Chaitu should know?
+            <textarea name="notes" rows="3" placeholder="Your expectations, concerns, preferred approach, etc."></textarea>
+          </label>
+        </div>
+
+        <label class="consent">
+          <input type="checkbox" name="consent" required>
+          <span>I confirm that the information provided is accurate and I agree to be contacted regarding my fitness registration and training. *</span>
+        </label>
+        <small class="error consent-error"></small>
+      </section>
+
+      <div class="navigation">
+        <button type="button" id="backBtn" class="btn secondary" disabled>← Back</button>
+        <button type="button" id="nextBtn" class="btn primary">Continue →</button>
+        <button type="submit" id="submitBtn" class="btn primary hidden">Submit Registration ✓</button>
+      </div>
+    </form>
+
+    <section id="success" class="success-card hidden">
+      <div class="success-icon">✓</div>
+      <div class="eyebrow">REGISTRATION RECEIVED</div>
+      <h2>You're officially on the list.</h2>
+      <p>Thank you for registering with Chaitu Fitness. Chaitu will review your details and contact you soon.</p>
+      <button class="btn primary" id="newRegistration">Register Another Client</button>
+    </section>
+
+    <footer>
+      <strong>CHAITU FITNESS</strong>
+      <span>Train. Transform. Thrive.</span>
+      <small>© 2026 Chaitu Fitness</small>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
